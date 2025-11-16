@@ -1,4 +1,4 @@
-import TimetableTable from "../components/TimeTableTable";
+import EnhancedTimetableViews from "../components/EnhancedTimetable";
 
 export default function Timetable() {
   const timetable = JSON.parse(localStorage.getItem("timetable") || "[]");
@@ -7,7 +7,7 @@ export default function Timetable() {
     <div className="p-6">
       <h2 className="text-2xl font-bold mb-4">Generated Timetable</h2>
       {timetable.length > 0 ? (
-        <TimetableTable data={timetable} />
+        <EnhancedTimetableViews data={timetable} />
       ) : (
         <p>No timetable generated yet.</p>
       )}
